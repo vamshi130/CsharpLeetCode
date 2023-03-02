@@ -65,7 +65,11 @@ namespace Dictionaries
             //anagram.anagramCheck("aacc", "ccac");
             //////////////////////////////////////////////////////////////////
             ///Grouped Anagram
-            GroupAnagrams.GroupAnagram();
+            //GroupAnagrams.GroupAnagram();
+            //////////////////////////////////////////////////////////////////
+            int[] nums = new int[] { 1, 1, 1, 2, 2, 3 };
+            int k = 2;
+            TopKFrequentElements.TopKFrequent(nums,k);
         }
     }
 }
