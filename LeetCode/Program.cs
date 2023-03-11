@@ -67,9 +67,11 @@ namespace Dictionaries
             ///Grouped Anagram
             //GroupAnagrams.GroupAnagram();
             //////////////////////////////////////////////////////////////////
-            int[] nums = new int[] { 1, 1, 1, 2, 2, 3 };
-            int k = 2;
-            TopKFrequentElements.TopKFrequent(nums,k);
+            //int[] nums = new int[] { 1, 1, 1, 2, 2, 3 };
+            //int k = 2;
+            //TopKFrequentElements.TopKFrequent(nums,k);
+            //////////////////////////////////////////////////////////////////
+            LongestConsecutiveSequence.ConsecutiveNumbers();
         }
     }
 }
