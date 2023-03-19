@@ -26,8 +26,7 @@ namespace Dictionaries
             //if(dictionay.ContainsKey("movie"))
             //dictionay.Remove("movie");
             //Console.WriteLine("hello");
-            //string s = "pwwkew";
-            //var data=substring.LengthOfLongestSubstring(s);
+            substring.LengthOfLongestSubstring();
             //Console.WriteLine("hello", data);
             //MedianOfTwoArrays.MedianOfTwoArray();
 
@@ -54,9 +53,7 @@ namespace Dictionaries
             //str[0].Contains(st);
             //commonStringInArray.commonString(str);
             /////////////////////////////////////////////////////////////////
-            //int[] nums = { -1, 0, 1, 2, -1, -4 };
-            //int[] nums = { 0, 0, 0, 0 };
-            //addingThreenumbersTogetZero.addThreeNum(nums);
+            //addingThreenumbersTogetZero.addThreeNum();
             /////////////////////////////////////////////////////////////////
             //BubbleSort.closestNumber();
             /////////////////////////////////////////////////////////////////
@@ -71,7 +68,12 @@ namespace Dictionaries
             //int k = 2;
             //TopKFrequentElements.TopKFrequent(nums,k);
             //////////////////////////////////////////////////////////////////
-            LongestConsecutiveSequence.ConsecutiveNumbers();
+            //LongestConsecutiveSequence.ConsecutiveNumbers();
+            //////////////////////////////////////////////////////////////////
+            //validPalindromeAllCharacters.ValidatePalindrome();
+            //containerWithMostWater.mostWater();
+            //BuyAndSellStock.SellStock();
+            //SlidingWindow.slide();
         }
     }
 }

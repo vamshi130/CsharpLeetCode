@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,27 +9,22 @@ namespace Dictionaries
 {
     public  class substring
     {
-        public static int LengthOfLongestSubstring(string s)
+        public static int LengthOfLongestSubstring()
         {
-            char[] temp = s.ToCharArray();
+            string s = "abccbcbbdefgh";
             int max = 0;
-            Dictionary<char, int> collection = new Dictionary<char, int>();
-            for (int i = 0, j = 0; i < temp.Length; i++)
+            string test = "";
+            foreach(var c in s.ToCharArray())
             {
-                if (collection.ContainsKey(temp[i]))
+                var current = c + "";
+                if (test.Contains(c))
                 {
-                    j = Math.Max(j, collection[temp[i]] + 1);
-                    collection.Remove(temp[i]);
-                    collection.Add(temp[i], i);
+                    test=test.Substring(test.IndexOf(current)+1);
                 }
-                else
-                {
-                    collection.Add(temp[i], i);
-                }
-                max = Math.Max(max, i - j + 1);
+                test += c;
+                max=Math.Max(max,test.Length);
             }
-
-            Console.WriteLine(collection.Count());
+            Console.WriteLine(max); 
             return max;
         }
     }
