@@ -1,13 +1,13 @@
-﻿using System;
+﻿using CsharpPrograms;
+using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Dictionaries
 {
-    internal class Program
+    public static class Program
     {
 
-
-        //
         static void Main(string[] args)
         {
             //string comparer for case censitive
@@ -26,7 +26,7 @@ namespace Dictionaries
             //if(dictionay.ContainsKey("movie"))
             //dictionay.Remove("movie");
             //Console.WriteLine("hello");
-            substring.LengthOfLongestSubstring();
+            //substring.LengthOfLongestSubstring();
             //Console.WriteLine("hello", data);
             //MedianOfTwoArrays.MedianOfTwoArray();
 
@@ -74,6 +74,22 @@ namespace Dictionaries
             //containerWithMostWater.mostWater();
             //BuyAndSellStock.SellStock();
             //SlidingWindow.slide();
+            //PermutationInaString.CheckInclusion("ab", "eidboaoo");
+            //int n = 3;
+            //int c = 0;
+            //int i = 0;
+            //int o = 0;
+            //char[] arr = new char[n * 2];
+            //balancedParanthesis.balance(i, o, c, arr,n);
+            //jsonExtract.Extract();
+            //string str = "ABC";
+            //char[] chars = str.ToCharArray();
+            //int fi = 0;
+            //AllPermutationsOfaString.permutations(chars, fi);
+            //jsonExtract.Extract();
+            //JsonSplitter.jsonsplit();
+            TwoSum.TwoSumZero();
+
         }
     }
 }

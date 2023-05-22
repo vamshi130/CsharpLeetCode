@@ -52,8 +52,6 @@ namespace Dictionaries
                 max = list;
                 return max;
             }
-            Console.WriteLine(list);
-            return null;
         }
     }
 }

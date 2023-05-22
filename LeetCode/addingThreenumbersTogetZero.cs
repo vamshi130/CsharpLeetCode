@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dictionaries
 {
-    internal class addingThreenumbersTogetZero
+    public static class AddingThreenumbersTogetZero
     {
         public static IList<IList<int>> addThreeNum()
         {
