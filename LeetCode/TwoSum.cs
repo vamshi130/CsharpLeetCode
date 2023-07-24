@@ -8,6 +8,7 @@ namespace CsharpPrograms
 {
     public static class TwoSum
     {
+        public static int num;
         public static void TwoSumZero()
         {
             int[] numbers = { 2, 7, 11, 15 };
