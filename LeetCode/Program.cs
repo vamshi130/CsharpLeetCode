@@ -82,15 +82,15 @@ namespace Dictionaries
             //char[] arr = new char[n * 2];
             //balancedParanthesis.balance(i, o, c, arr,n);
             //jsonExtract.Extract();
-            string str = "ABC";
-            char[] chars = str.ToCharArray();
-            int fi = 0;
-            AllPermutationsOfaString.permutations(chars, fi);
+            //string str = "ABC";
+            //char[] chars = str.ToCharArray();
+            //int fi = 0;
+            //AllPermutationsOfaString.permutations(chars, fi);
             //jsonExtract.Extract();
             //JsonSplitter.jsonsplit();
             //TwoSum.TwoSumZero();
-            //InheritenceMethodOverriding objA= new InheritenceMethodOverriding();
-            //ChildClass objB= new ChildClass();
+            //InheritenceMethodOverriding objA = new InheritenceMethodOverriding();
+            //ChildClass objB = new ChildClass();
             //InheritenceMethodOverriding objAB = new ChildClass();
             //objA.baseClass();
             //objB.baseClass();
@@ -100,7 +100,8 @@ namespace Dictionaries
             //objB.Test();
             //objAB.Test();
             //RecursionTest.Recusrion(3);
-            //objAB.childClass();
+            int[] arr=new int[] {-1,-1,0,-3,3};
+            ProductsOfElementsInAnArray.ProductOfArray(arr);
 
         }
     }
