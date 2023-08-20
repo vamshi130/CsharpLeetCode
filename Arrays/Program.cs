@@ -11,5 +11,11 @@ using Arrays;
 //CountOfSmallOrEqualElements.count(arr, 99);
 //int[] arr = new int[] { 20, 32, 45, 66, 99, 100 };
 
-int[] arr = new int[] { 20,4,4,4,4,4, 100 };
-FirstAndLastPositionInArray.Position(arr, 4);
+//int[] arr = new int[] { 20,4,4,4,4,4, 100 };
+//FirstAndLastPositionInArray.Position(arr, 4);
+//SearchInaRotatedArray.SearchElement();
+//MedianOfTwoSortedArrays.Median();
+//BooksAllocation.BooksAllocate();
+//SquareRootOfANumber.SquareRoot();
+//RotateArray.Rotate();
+MoveZeroesEnd.MoveZeroes();
