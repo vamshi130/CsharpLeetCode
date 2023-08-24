@@ -11,6 +11,8 @@ namespace CsharpPrograms
         public static int num;
         public static void TwoSumZero()
         {
+            Dictionary<int, int> dict = new Dictionary<int, int>();
+            dict.ContainsKey
             int[] numbers = { 2, 7, 11, 15 };
             int[] array = new int[2];
             int target = 9;

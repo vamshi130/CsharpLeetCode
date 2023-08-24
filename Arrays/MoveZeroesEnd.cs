@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,16 +35,6 @@ namespace Arrays
                         nz++;
                         n++;
                     }
-                
-
-                //if (arr[i] == 0)
-                //{
-                //    for (int j = i; j < arr.Length - 1; j++)
-                //    {
-                //        arr[i] = arr[i+1];
-                //        arr[arr.Length - 1] = 0;
-                //    }
-                //}
             }
 
         }
