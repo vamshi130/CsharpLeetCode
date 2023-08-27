@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delegates", "..\Delegates\D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recurssion", "..\Recurssion\Recurssion.csproj", "{3494D3C9-6DDB-4C0C-BF15-93B8C2741537}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "..\Arrays\Arrays.csproj", "{B19DD6A1-9E44-443C-B784-664F9F26776C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arrays", "..\Arrays\Arrays.csproj", "{B19DD6A1-9E44-443C-B784-664F9F26776C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList", "..\LinkedList\LinkedList.csproj", "{959B6958-4A0C-4E3A-B712-CECB78A6E42A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{B19DD6A1-9E44-443C-B784-664F9F26776C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B19DD6A1-9E44-443C-B784-664F9F26776C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B19DD6A1-9E44-443C-B784-664F9F26776C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{959B6958-4A0C-4E3A-B712-CECB78A6E42A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{959B6958-4A0C-4E3A-B712-CECB78A6E42A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{959B6958-4A0C-4E3A-B712-CECB78A6E42A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{959B6958-4A0C-4E3A-B712-CECB78A6E42A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
