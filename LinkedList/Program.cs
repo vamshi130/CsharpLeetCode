@@ -23,10 +23,22 @@ BasicLinkedList obj= new BasicLinkedList();
 
 
 AddElementInLinkedList add=new AddElementInLinkedList();
-add.Add(2);
-add.Add(3);
-add.Add(4);
-add.Add(5);
+add.Add(20);
+add.Add(30);
+add.Add(40);
+add.Add(50);
+add.AddFirst(60);
+add.AddAtIndex(3, 800);
 add.Traverse();
+Console.WriteLine("----------------------------------------");
+add.RemoveLastIndex();
+add.Traverse();
+Console.WriteLine("----------------------------------------");
+add.FindIndex(30);
+Console.WriteLine("----------------------------------------");
+add.RemoveFirstElement();
+add.Traverse();
+
+
 
 

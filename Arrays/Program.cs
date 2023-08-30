@@ -20,4 +20,5 @@ using Arrays;
 //RotateArray.Rotate();
 //MoveZeroesEnd.MoveZeroes();
 //TappingRainWater.TappingWater();
-MaxSubArraySum.MaxSubArray();
+//MaxSubArraySum.MaxSubArray();
+MinimumInRotatedSortedArray.MinElement();
