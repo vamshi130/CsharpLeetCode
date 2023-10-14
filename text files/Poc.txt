@@ -1,0 +1,42 @@
+>net core---------------------------------------------------------------
+Application life cycle
+
+--
+Application start-------------------object creation--------------------- Http Application-------------------------------Dispose----------------------Application  
+ is a method that can be             The https requets contains           object helps to process each                   helps to release manually     helps to unload the memory
+ executed by the web server          All the info about current           subsequent request sent to the                 unmanaged resources                                        
+ when a user makes a request         request,like cookies and browser     application that is created by web server 
+                                      info.
+									  
+DbContext
+Dbset class is used add or delete the entities
+The database context is the main class that coordinates Entity Framework 
+functionality for a data model. This class is created by
+ deriving from the Microsoft.EntityFrameworkCore.DbContext class.							
+ 
+ -------------
+ Dependency Injection
+ ->net core injects objects of dependecy classes through constructor
+  or method by using built in IOC container
+  
+  
+ [ApiController] attribute which enables a few new features such as automatic 
+ model state validation and binding source parameter inference
+ 
+ -sqlserver
+ -design
+ -core
+ 
+ dotnet tool install --global dotnet0ef
+ 
+ 
+ ----------Startup.cs
+ 1.ConfigureService() (using dependency injection to register classes or retrive)
+             AddControllers();
+ 2.Configure()  =>For Adding middlewares
+             UseRouting() [to enable routing]
+			 UseEndpoints()[To execute the requested action method(based on resource)]
+			 
+Automapper-----(codewrinkles youtube)
+Helps to transform one object type to another.it is a convention based object-to-object mapper
+			 

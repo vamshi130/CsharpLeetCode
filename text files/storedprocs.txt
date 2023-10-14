@@ -1,0 +1,61 @@
+Views in SQL
+-view is a virtual or logical table for the base table
+-will not stor data but query statement is only stored
+-Types
+   --Simple
+   --Complex
+-Simple View -when we access the required data from a single base table
+             -It can support all DML operations
+			 -
+-complex    -when we acces data from multiple bases tables 
+            -It does'nt support all dml operations on multiple base tables at a time
+			-are also called non-updatanle views
+syntax----------------
+create view v1 as select * from BaseTable
+select * from V1
+without interacting with the base table we can use views
+C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA
+
+Stored Procedures
+
+
+
+sp by using OUT parameters
+steps-----
+1.Declare Bind variables for out parameters in sp
+Declare @<Bind var.name> <DT>[size]
+2.Adding the bind variables to a sp:
+EXECUTE/EXEC <SP_NAME> VALUE1,VALUE2,...@<Bind var.name> OUT
+3.To print the bind varibales
+print @<Bind var.name>
+
+create procedure CalculatingPFandPT(@EID int,@PF int out,@pt int out)
+as
+Begin
+Declare @sal Money
+select @sal= salary from Employee where EmpId=@EID
+set @Pf=@sal * 0.1
+set @pt=@sal*0.2
+END
+-----------------
+Declare @dpf int,@dpt int 
+exec CalculatingPFandPT 2,@dpf  out,@dpt  out
+print 'Provident fund:'+cast( @dpf as varchar)
+print 'professional tax is:'+cast( @dpt as varchar)
+
+-------------sp using return statements
+the return value of an stored procedure is an integer and only one value
+
+create proc sp1
+as 
+Begin
+   return (select count(empID) from Employees)
+END
+
+Declare @Total int
+Execute @Total=sp1
+print @Total
+
+
+
+

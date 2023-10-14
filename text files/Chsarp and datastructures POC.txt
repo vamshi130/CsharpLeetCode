@@ -1,0 +1,32 @@
+Dictionary---An abstract data structure stores data in the form of Key/value pair
+          ---we can overwrite dioctionary values only by index method i.e obj[1]="data";
+
+
+-The goal of a Hashing function is to take in a key and reliably place it somewhere in the 
+ hash table so that it can be accessible
+-Hash function-take the key,divide it by itself then multiply the result
+               by the number of digits in the key minus 1
+			   
+Enumerations--------------
+A enum is a userdefined type.
+Better to define  an enum directly under the namespace
+rather than Class or a structure.
+-use
+  Whenever the user wants select a perticular item from a list we can use enums
+  
+  -----------------------------
+Variable of a class
+  -class is a userdefined type
+  -int is a data type
+  int i=100 here  i is copy of int
+  ---Non static members of a class cannot be accessible from static main class
+  ---we need to make instance to use
+  ---instance of class can be created only by using new keyword
+  ---  ClassFirst f =new ClassFirst()=>here f is the instance of a class and instance can have its own memory and not share with any instance
+       ClassFirst f1=new ClassFirst()=>here f1 is the reference of the class
+	                                    reference willl not have any memory but use like instance
+										it just acts like a pointer
+  ---  ClassFirst f; =>here f is the variable of a class
+                  f=new ClassFirst(); =>here f os instance of class
+				  ---memory is allocated only for instance of a class
+  ---			  

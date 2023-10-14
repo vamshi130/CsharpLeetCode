@@ -1,0 +1,29 @@
+Dependency Injection in .Net Core:
+
+DI is a DEsign  Pattern
+DEsign Pattern ?
+-BAL,DAL,PL,..->it's a problem
+MVC architecture=> Solution to the above problem
+MVC is a design pattern
+
+DI covers Tightly coupled vs Lossely coupled
+-tight coupling is usually bad because it reduces flexibility and re-usability of code
+-Loose Coupling means reducing dependencies of a class that use a different class directly.
+Class must be acts as lossely coupled
+
+For converting tightly coupled into loosely coupled we have some principles
+1.Inversion of control principle
+2.Dependency Inversion principle
+
+Inversion of control (IOC)
+-Invert the application control flow
+-there should not be any direct dependency between classes
+-we had inverted the control of creating instance
+
+Dependency Inversion principle(DIP)
+-High level modules does not depend on low level module
+   -High level module means who are using other classes data
+-Both modules should be depend on abstractions.
+    -Abstarctions in which we cannot create objects   
+
+

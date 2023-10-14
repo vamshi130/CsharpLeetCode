@@ -1,0 +1,660 @@
+Angular is an open source javascript binding framework to build applications
+--angular helps to implememnt mvvc
+--it used to develop SPA
+(single page applicatoions)
+--use a lot of reusable code
+--having in-built validatons,routing
+--angular is aproduct of Google team makes us of Type script language from microsoft
+---Angular 1.x(ANgular js) uses mvc architecture
+---Angular 2(written in TypeScript) uses primary architectural charasteristic Based on components
+---------------
+actually javascript works on clients side
+
+angular cli-is an interface tool for creating anular projects
+
+ 
+
+@ViewChild - Decorator is used for referencing elements from the components view DOM.
+TypeScript
+--it is an open source oops langauage
+--it is a strongly typed superset of java script
+--It is not directly run on the browser it needs a compiler to compile and generate a script file uses(v8 engine)
+Advanatages()
+---Typescripte shows error at compile time
+---Java sCript shopws errors at run time
+---Strongly typed
+--- Runs on any browser
+---takes some time to compile
+---not support abstract class
+---
+node---is a javascript runtime environment built on chromes v8 javascript engine
+Npm---is package manager for the javascript programming
+Angular CLI--npm install -g @anugular/cli  (-g because globally run the program)
+Text editor--VisualstudioCode
+--------
+To create a new project
+1-open vs code editor--VisualstudioCode
+2-open new terminal
+3-type  ng new Projectname
+4-select css
+after creatring project change cd to project folder
+next ng serve (user for compiling)
+-----------
+Automatically created files
+Structure
+---Module
+it is collection of individual module
+consists of atleast one module 
+ex-user module
+  -Administrator Module
+---Components
+-these controls a portion of the view on the browser
+-contains atleast one component
+-by default called App-component(root component)
+
+---sERVICES
+Contains the businner logic
+---------------
+---Components
+View /Html   + Code(class)  + Information (MetaData)
+---ng g c ComponentNAme(creating a compon ent)
+app.commponent.ts ==>contains the view logic 
+app.modoule.ts ==>consists of all the dependices that are required by the all components
+angular.json ==>dedfines the struture of our project
+ 
+
+
+
+
+
+  --------------
+  Interpolation
+  
+  ----
+  toShow the data dynamically we use interpolations
+  or passing the data from class to views
+  in this assignments will not work
+  
+instaed of creating four components 
+use ng g c test -it -is --skipTests=true  
+-----
+One way Binding data goes from class to template
+
+  Property binding
+  -------------
+  Attrbutes values are unchanged and dom values are changed
+  ex-<input [id]="courseId" type="text" value="anguilar">
+     or
+	 <input id="{{courseId}}" type=text value="angular">
+	 for interpolation booleans not worked i.e always true
+	 to overcome this issue we need to use square brackets
+	 <input [disabled]="false" id="{{courseId}}" type=text value="angular">
+------
+Class Binding properties
+<h1 [class.StyleName]="ConditionDefined in Class">Data</h1>
+---------------
+Event binding 
+-passing data from view to class	 
+----------
+----------
+----------
+----------
+{}--Method Defifnition
+{{}}--Interpolation
+[]--Property Binding
+()--Event Binding
+---------------------------------------
+-----------------------------------------
+---------------------------------------
+Creating Components manually
+First add a folder in the application
+1-inside folder add a file named filename.component.ts
+2-first export class filenameComponet{}
+3-then add a @Component() decorator 
+4-the component decoratror needs to be imported
+ import {Component}from '@angular/core';
+5-add selector and template in component
+  selector:'app-warning-akert',
+  template:'
+-------------------------------------------
+----------------------------------------------
+---------------------------------------------
+-------------------------------------------
+Template Reference variable
+ex-
+  <input #msg type="text">
+  <button (click)="message(msg.Value)" type="button">Welcome</button>
+  
+   Class{
+     message(message){q
+	    console.log(message);
+	 }
+   }
+   ----------------------
+   ---------------------
+   ---------------------------
+   ---------------------------
+Two way binding
+ngModel directive is used to achieve two way data binding
+must import FormsModule form '@angular/forms
+two binding=property binding + EventBinding
+           = [()]
+		 
+--------------------------------
+--------------------------------
+--------------------------------
+
+Structural Directives
+-used for adding or removing Html elements from the template
+-nglf
+-ngSwitch these both used for Conditional render Html elements
+ngFor-used for render list of html elements
+ 
+ 
+ ------------------------------------
+ --------------------------------------
+ ---------------------------------------
+ -----------------------------------------
+ You can pass values from a parent to a child component
+ using [property binding] in the parent and @Input() in the child.
+
+You can pass values from a child to a parent component
+ using (event binding) with an EventEmitter in the parent and @Output() in the child.
+ 
+-------------
+pipes 
+{{name | lowercase}}
+{{2.5 | currency:'INR'}} 
+{{date | date:'short'}}
+import pipe and pipetransform from angular/core
+ng g pipe
+
+
+
+
+
+--------------------------------
+--------------------------------
+--------------------------------
+IEnumerable
+So if you need the ability to make permanent changes of any kind to your collection (add & remove), 
+you'll need List. If you just need to read, sort and/or filter your collection, 
+IEnumerable is sufficient for that purpose.
+
+
+--------------
+--------------
+--------------
+Services
+services that are used to provide the data that are 
+requred by the components
+1.define the servieclass
+2.Register with injector(app module or any components)
+3.Declare as dependency in components (i.e reference for any metthod declare in constructor)
+
+      Get------->request   ----
+	                       Database
+   Obesrvable---<Response  ----						   
+But that incoming Http Response(obesrable) 
+is not ready to use in our application
+so, after recieving the obersable we need to convert the incoming response
+into an array
+-After conversion into an array only it is ready to use in our application
+---Steps--
+-Get request from service
+-Recieve obseravble and cast in into array
+-Subscribe to the observable from our components
+-assign array to local variable
+
+Rxjs(reactive extensions for javascript) is an 
+external library used in angular to work with obseravables
+
+{path:"**",component:} this one must be written at last
+here ** will be the wild card routes whenever the url path
+is not matched with any components it executes the wild card route
+{path:'',redirectTo:'/path',pathMatch:'full'}
+because if the url is emply it mustredirect to the default coponent
+rather than page not found component the above line
+should be the first
+
+
+----
+Snapshot   vs   Paramap
+Snapshot--if the route parameter values does not chnage and you only want to read the
+             the intial route parameter value
+			 
+
+
+----
+paraMap is an api which is used to get the data present in url
+
+
+-------
+Relative Routing
+
+Child routes
+
+
+
+
+
+
+Dependency Injaction
+1.first create a service 
+2.Initilaiz the service in app module to acquire all modules
+3.initialize parametres in constructor of required component
+--------------------------------
+--------------------------------
+--------------------------------
+Http-
+import {HttpClientModule} from angular/commom/http
+-------------
+------------
+-------------
+ 
+Routing--
+To work routes we need to write router Outlet
+routeroutlet is like a placeholder for loading the components
+forRoot()=>is used for bootstrapping the application
+ 
+
+
+App routing----------
+configure route
+ ---
+ Activated route to stay and display cureent valuels of url
+
+--------------------------------------------
+--------------------------------------------
+--------------------------------------------
+Dependency Injection
+1.Without Dependency Injection
+class Engine{
+    constructor(){}  //suppose passing the parameter petrol
+}
+class Tires{
+    constructor() {}
+	}
+
+class Car{
+      engine;
+	  tires;
+	  Constructor(){
+	  this.engine=new Engine(); //here also need to pass the parameter petrol  //we need to redifine to use unittesting
+	  this.tires=new Tires()   // here we are creating the copies
+	  }
+}	  
+	  
+Dependency Injection is a coding pattern in which a class recieves its dependencies from
+external source rather than creating them iteself
+
+class Car{
+   engine;
+   tires;
+   constructor(engine,tires){
+   this.engine=engine;
+   this.tires=tires;
+   }
+}	  
+	  
+
+----
+we need to inject the service class in app module .ts file
+
+
+
+--------------------
+---------------------
+----------------------
+Lazy Loading
+in angular by default modules are eagerly loaded, means when app loaded,
+all modules are loaded without checking whether they are immediate required or not
+--Lazy loading is a design pattern that loads required modules only
+ lazy loading helps to keep the initial bundles size smaller which helps to decrease the
+ load time and increase the performance
+----
+syntax
+ng g m faculty --route faculty --module app.module.ts
+    ^	
+	|				  |
+	|				  |
+ generate a       create a lazy loading 
+module with       feature in routing file 
+name faculty	  by the path as "faculty"
+
+
+----------------
+----------------
+Route Guard
+ng g guard <guard-name>
+then select given options like canActivate
+the in
+{path: ,component:,canActivate:[pass the guard name]
+
+CanActivate:
+@injectable({
+providedIn:'root'  => here root means which will avialble entire application
+})
+CanActivateChild  =>
+same as CanActivate but difference is it will run before each child route is activated.
+checks if a user can access to the child routes or not.
+
+CanLoad  =>This protects the route completely.Such as lazy loading the module
+           and also protects all the routes asociated with that module.
+
+Creating without cli
+---first create guard for a component
+---Register the guard with angular dependency injection  (i.e in providers)
+---Tie the guard to a route
+
+
+
+
+
+
+
+---------------
+---------------
+---------------
+Template Driven forms-most code written in html forms
+Reactive forms/Model Driven Forms-most code written in components form
+
+
+Template driven forms--are most suitable for simple scenerious
+uses two way databinding using the [(ngModel)] syntac
+-But unit testing might be challenging
+-when we are using ngmodel for input filed then name attribute must be included
+ngForm is an instance of the formGroup
+The formgroup represents the group of form controls
+-------------
+-------------
+-------------
+Bootstrap-5
+ container-are the most basic layout element in bootstrap
+       it is used for fixed for perticular size
+ container-fluid  ---using this we can full width
+ two way daa binding passing data to view and vice versa
+ 
+ 
+ 
+ Validations                                 Class if true               class if false
+ The control has been visited                ng-touched                  ng-untouched
+ The control value has been changed          ng-dirty                    ng-pristine
+ the control value is valid                  ng-valid                    ng-invalid
+ 
+ -------------
+ 
+Packages-------
+npm i ng2-search-filter  for filtering
+codo(yt)
+
+
+
+
+validation with visual feedback
+for email also we can use pattern
+write inside input ---  pattern="[ search in google]"
+email.errors.pattern>email not valid</small>
+#password="ngModel"
+to get the control of password for validation
+Template driven formms vs model driven forms
+-
+transform:translate(-50%,50%) given form exactly middle
+
+
+-------------------------------
+-------------------------------
+---------------------------------
+Model driven forms
+
+
+patchValue vs setValue
+ patchVluse will not follow the strict structue
+ setValue will follow the strict structure
+ 
+
+----------------------
+FormBuilder
+
+--------
+Component lifecycle hooks
+Every angular component has 8 lifecycle hooks
+How a component can be start
+how it can be tracked
+how it can be destroyed
+1.ngOnChanges() --imp
+2.ngOnInit      --imp
+3.ngDoCheck()
+4.ngAfterContentInit()
+5.ngAfterContentChecked()
+6.ngAfterViewInit()      --imp
+7.ngAfterViewChecked()
+8.ngOnDestroy()            --imp
+
+ngOnChnages() methods of a component or directive it detects changes to the input properties
+it is called first time before ngOninit()
+
+ngOnInit()
+called once after the first ngOnchanges method
+it is used to initialize the data in the component
+added to every component by default by angular cli\
+it is called only once
+
+ngDoCheck()
+called immediate after ngOnChanges
+
+
+Angular Material
+is an implememntation of googles material design specification
+-has in-built responsive designing
+-angular material classes are created in such a wat that the website can fit in any screen
+-cross -browser
+-
+
+
+
+
+Ngrx
+
+----
+rxjs for handling obserables
+redux is basically a global state management taken fro the react
+
+Ngrx is a framework for building reactive applications in angular
+State--includes both the state of UI and the state of variables in your code
+
+Redux Architecture
+1.Single store
+2.Read-only state
+3.Pure funtion reducers
+
+
+------
+rule-communication between component directly not going to be happen
+    -it must must be store in state
+
+Reudx-what is the status of the my application at this time
+     -what is value does a ariable have
+	 -who changed that variable or some variable
+	 -is developed by facebook and used for developing javascript applications
+
+-------
+State -
+	
+	
+	////////////////////////////////////////////View Child vs Input/Output
+	input/output for data binding and controlling the state of a child component from the parent to keep him isolated and stateless.
+	ViewChild/ren for dom manipulations similar to what we used to do with jQuery to change the native HTML element
+
+
+
+/////////////////////////////////////////////////////////////////////////
+Modules--->is a class with an ngModule decorator
+       --->used for defining a module
+	   --->
+
+
+
+
+
+let person={
+  name:string;
+  age:number;
+};
+person={
+  name:'Max',
+  age:32
+}
+
+
+
+
+SUBJECTS/OBSERVABLES
+service/
+A-
+
+
+
+
+IssquaredCarreersEntities
+ <httpProtocol>
+  <customHeaders>
+	  
+    <add name="Access-Control-Allow-Origin" value="*" />
+    <add name="Access-Control-Allow-Headers" value="Content-Type,  Access-Control-Allow-Headers, Authorization, X-Requested-With" />
+    <add name="Access-Control-Allow-Methods" value="GET, POST, PUT, DELETE, OPTIONS" />
+  </customHeaders>
+ </httpProtocol>
+
+C:\Users\vamshi kunuguntla\source\repos\IssquaredWebCarrer\Files\Resumes\
+!Kvk143@Kvk143@Kvk143@
+
+
+
+Angular.Json-----contails all the project details
+schema--contains all the angular cli commands
+version: by default will be 1;
+
+ schematics:
+ architect:
+  build-->
+    polyfills=>
+	configurations: 
+	      production: 
+		     budgets:
+			 all the files that are created by angular like js files or main.js will not exede the limit in size
+			   type:intial
+			   
+			   
+			   
+		  development:
+		    
+polyfills --is to used for supprot for multtiple browsers
+aot: true ---ahead of time compilation used in production
+	
+
+
+
+
+
+
+<span class="material-symbols-outlined">
+delete_forever
+</span>
+
+
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+Angular Components LifeCycle
+--1.ngOninit            ------2
+       -will be called once throughout the lifecycle
+  2.ngOnChanages        ------1 executes 1st =>@input,@output =>EventEmitter
+       -currentvalue,previousvalue,firstchange()===(three attributes)
+  3.ngDoCheck           ------3
+       -whenever the change in the component it will called 
+  4.ngAfterContentInit  ------4
+       -is invoked whena data sent form parent component to child compoent the data
+   	   rendered in child component so in this case it will called
+  5.ngOnDestroy         -------8
+  6.ngAfterViewChecked() ------7
+  7.ngAfterViewInit()    ------6
+  8.ngAfterContentChecked() ---5
+       -checks the 4.
+
+Before hooks get executed constructor gets executed-
+constructor is not part of any hooks
+
+----------------------------------------------
+----------------------------------------------
+----------------------------------------------
+How a component can be start
+how it can be tracked
+finally how it can be destroyed
+1.ngOnChanges -
+             ---angular calls this methods of a component or directive wheneever
+			    it detects changes to the input properties
+				note: if our component has no inputs or you use it without providing any
+				inputs,then framework will not call ngOncahnages
+2.ngOninit
+             ---called once after the first ngOnChanges Method
+			 ---it is called only once
+3.ngDoCheck
+             ---called immediately after ngOnChanages
+			 ---To monitor changes that occur where,ngOnChanages won't catch them
+			 ---you can implement your own change check()
+			 ---i.e you can use ngDoCheck hook to detect and act upon changes 
+			    that angular doesn't catch on its own.
+4.ngAfterContentInit
+             ---called only once after ngDoCheck()
+			 ---It is run through the initialization of the content. 
+5.ngAfterContentChecked
+             ---Called after every ngDoCheck()
+			 ---waits till after ngAfterContentInit() on first run through
+			 ---
+6.ngAfterViewInit
+             ---called after angular initializes component and child component content
+			 ---called once after the first ngAfterContentChecked()
+			 
+7.ngAfterViewChecked
+             ---called after all the content is initialized and checked
+			 ---first call is after ngAfetrViewInit()
+			 ---called after every ngAfterContentChecked() call is completed
+8.ngOnDestroy
+             ---used to cleanup any unnecesary code when a component is removed from DOM
+			 ---mostly it used to unsubscribe from things like services
+			 ---called only once just before component is removed from the DOM
+			 
+------------------------
+
+mostly used hooks
+---ngOnChanges()
+---ngOninit()
+---ngAfterViewInit()
+---ngOnDestroy()
+
+Routing and Navigation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+	

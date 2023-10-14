@@ -1,0 +1,226 @@
+https://www.microsoft.com/en-us/videoplayer/embed/RWPaCk
+https://microsoftlearning.github.io/AZ-900T0x-MicrosoftAzureFundamentals/
+ou can refer to this video on how you can link your emails: https://aka.ms/TrainingDayExamDiscount If you have any problems with the discount, please visit https://aka.ms/mvtdexamsupport for additional support.
+Azure is a cloud computing platform with an ever-expanding set of services
+AZure fundamentals is a series of six learning paths
+Cloud computing
+ It's the delivery of computing services over the network
+ which includes servers, storage,databases,networking
+      (screentshot)
+	  container engine after the hypervisor
+	  in hypervisor we need to do patching ,migration and many more
+	  in container we dont need to any it convert into a package 
+	  hypervisor,comtainer,serverless runtime
+	  serverless runtime ---function
+	Cloud services Benefits
+	-Scalability and elastibility
+	-High Availability
+    -Fault tolerance
+	-Agility,customer latency capabilities
+	-Disaster recovery in azure we call as service recovery
+Cloud services-----	
+	On-premises--we can manage when we are having data centers (i.e in our office we having total data servers or own cooling systems)
+	             we are responsible for everything total         
+	Iaas--like os,vms,cpu(we need to choose which os to use ) (providing servers or switches or storage or networking in high availability )ex google,aws
+	             Ex.In this we are taking a a place to place our own os or middeware (the place is just like server or networking)
+			   --host
+	Paas--like developers,deployers
+	             in this how the application is running
+	Saas--like business users
+	             in this they are having total responsibility
+				 ex office365. 
+	 
+	  
+-manage instance
+-azure sql server	
+cloud models-----
+	public cloud--
+	prons-
+	
+	private cloud--
+	hybrid  cloud--
+	
+    Virtual machine Scale sets (VMSS)(it will increase or decrease automatically)	
+	
+	 whenever the cpu is using some memory i.e more then it will automatically create another vms
+	
+    
+ 
+------
+Azure
+ Azure gives us the freedom to build ,manage and deploy applications on a 
+ massive global network using our favourite tools and frameworks
+ 
+ Virualization
+-------------------------------
+Azure Architecture
+---Regions -region is a set of datacenters of one or more deployed within a latency-defined perimeter
+            connected through a dedicated regional low-latency network.
+---Availability zones are available insid the regions upto 3 each availability zone containe itseft datacenters colings and netwroks
+---Resource group ex( groups inside another group) Resource group-vnet-subnet-
+                 -we group the subscriptions into management groups
+				 -resources can exist in only one resource group
+				 
+---Azure Resource Manager (ASM)( it is totally in json format)we can aslo create vm using 
+                    visual studio using arm template
+---The Azure Architecture usage and benefits 
+
+    -------------------------Azure solutions-----------------------
+Azure Management tools
+-Azure CLI
+-Azure PowerShell
+-Azure Portal
+-using APIs
+
+Regions--- 
+
+
+Traffic manager-checks to send request to nearest region
+
+
+networking-vpn and loadbalancing
+
+https://meet.google.com/rxk-wyiv-gyv?hs=224
+
+Virtual machines vs containers
+containers--docker engine is place of hypervisor
+          --No os in case of containers
+		  --More Containers as compared to vms
+		  --Bins/libs can be shared in containers but not in vms
+		  
+		  
+		  
+---------------------------------------------------------------------
+CapEx vs OPEx
+buying a company vechile is an example of capEx
+leaving a company vechile is an example of opEx
+cloud comes under opex as is goes based on consumption 
+
+Azure internent of things	
+
+Azure Solutions
+-IOT
+-AI
+-Big Data
+-Server less Computing
+-Azure Solutions benefits
+
+
+
+
+---Azure Load Balancing Services
+                                    |         
+     ------------------------------------------------------
+     |                                                    |
+   Global                                              Region
+      |                                                   |
+   Azure Front Doot(Http(s))                          Application Gate Way
+   Traffic Manager non-Http(s)                        Azure Load Balancer NonHttps
+Networking----
+  
+	
+     Storage
+ Iaas ----Disks
+        --Block level storage volumes for azure vm's
+      ----Files
+	    --Managed file shares for cloud or on-premises deployments
+ Paas ----Blobs
+        --Highly Scalable Rest based object store
+		--videos,unstructured,binary data,serving images or doc directly to a browser
+		--
+      ----Tables --no sql
+      ----Queues
+        --Reliable queues at scale for cloud services or messaging between application components
+Storage Tiers
+  -Hot Tiers  --reqgular
+  -Cool Tiers  -- 
+  -Archive Tier 
+
+LRS -Local Redundency service
+ZRS -Zones
+GRS -Global
+RA-GRS
+
+Access key for storage accounts
+  -To get Access to the storage accounts using only Access key
+for one storage there will be two keys
+key rotation--it able to refresh the key and generates the new key
+  
+  Databases
+  
+Azure Cosmos DB
+ --Globally disturbyted ,multi-model NoSQL database service
+ --PaaS Service-Auto-Scalable Across multiple regions
+ --Supports API,Including SQL,MongoDB
+Azure SQL Database
+ --Iaas
+ --Paas 
+Azure Data warehouse
+
+Azure ServerLess Computing
+-Azure Functions
+-Azure Login Apps
+-Azure Event Grid
+
+ 
+ management of the cloud
+ -automatically scale resource deployment based on need
+ -Deploy resources based on a preconfigured template,removing the need for manualconfiguration
+ -monitor the health of resoucres
+ -recieve aitomatic alrerts based on configured metrics 
+ 
+ Benifits of using Cloud services
+ Describe Cloud service types
+ -iaas
+ 
+ THe core Architectural components of azure
+ 
+ Core Architectural Components of Azure
+ 
+ vm vs container
+ vm -no os
+ container --having os
+ 
+  container -container engine-
+Exprees route lets you to extend on premises networks into the microsoft cloud over a private connection
+Expree route uses Border Gateway Protocol(BGP) to exchange route between on-premises networks and resources 
+  running in azure
+-  
+Azure DNS
+-Is a hosting servcice for DNS domains that provides name resolution by using microsoft azure infrastructre
+
+  
+  
+  Storage
+-
+Going for Network file system(NFS) use the premium file shares account type
+
+
+Azure Storage redundancy
+Data in azure storage account is always replicated three times in the primary region 
+Azure storage offers two options for how data is replicated in the primary region -LRS and ZRS
+LRS -11 nines of durability 99.999999999
+if datacenter fails storage present in LRS may be lost and unrecoverable.To mange this use ZRS,GRS, or GZRS
+ZRS -12 nines
+  
+Microsoft recommends using ZRS in the primary region for scenarios that require high availability. 
+ZRS is also recommended for restricting replication of data within a country or region to meet data governance requirements.
+
+GRS --16 nines
+
+GZRS -data in GZRS storage account is copied across three azure availability zones in the primary region 
+and is also replicated to a a secondary region
+
+Defences in Depth
+Physical Security
+  -Controlling access to computing hardware within the datacenter are the first line of defence
+Identity and Access
+  -This access is granted only to whats needed and that sign-in events and changes are logged
+  -Control access to infrastructure and change control
+  -USe SSO and multipfactor authentication
+Perimeter
+  -This protects from network-based attacks agoinst your resources
+  -Use DDos protection to filter large sacale attacks before they can affect the availability of a system
+  -use perimeter firewalls to identify and alert on malicious attacks against your network
+Network
+  -

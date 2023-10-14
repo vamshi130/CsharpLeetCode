@@ -1,0 +1,44 @@
+
+Jasmine--is a open source testing framework for javascript
+Jasmine is a BDD Testing framework --Behaviour Driven Development.
+Karma is used for executing the test on any browser.
+
+describe-->test suite
+
+TestBed-->configure and intializes environment for unit testing and provide methods for 
+           creating components and services in unit tests.
+configureTestingModule -->method takes a metadata object that can have the most of the properties
+                          of an @Ngmodule. To test a servcie
+
+BeforeEach  =>will be invoked before each test case
+            =>
+AfterEach   =>after each test case execution makes null
+
+beforeAll   =>
+afterAll    =>
+
+xit  => it will stop executing
+componentFixture is used to get the instance of an component or like we can write unit test for that 
+ perticular component
+
+HttpClientTestingModule =>consists a mock implementation of a http service
+
+HttpTstingController    =>
+
+presentaional components  =>
+
+el=fixture.debugElement   =>for access in the dom element
+fixture.detectChanges     =>what we are adding on the components level and to appear on the html
+                             we use detect changes
+
+.compileComponents =>used to compile the components aftre all requirements are done like testbed and imports
+we need to use asnc for before each to execute before the test cases run
+
+
+stub-a dummy piece of code that lets the test run,but dont;care what happens to it
+mock-a dummy piece of code that you verify is called correctly as part of the test
+spy--a dummy piece of code,that intercepts some calls to a real piece of code
+     allowing you to verify calls without replacing the entire original object
+package.json
+
+

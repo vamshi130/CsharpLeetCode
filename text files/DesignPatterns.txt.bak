@@ -1,0 +1,19 @@
+Design Principles
+Decarators-
+Decarator pattern is apowerfull toll for adding functionality to objects dynamically and maintaining code flexibility and reusability
+
+1-decarator pattern allows us to add new behavior to an object dynamically at runtime without effecting the behavior of other objects.
+
+
+-------------
+---Creation 
+---Structural
+---Behaviourail pattterns
+
+ 
+Chain of Responsibility
+-Reduced coupling
+-added flexibility in assigning responsiblities to object
+-Receipt is not guaranteed
+
+

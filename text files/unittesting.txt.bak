@@ -1,0 +1,131 @@
+
+Jasmine--is a open source testing framework for javascript
+Jasmine is a BDD Testing framework --Behaviour Driven Development.
+Karma is used for executing the test on any browser.
+
+describe-->test suite
+
+TestBed-->configure and intializes environment for unit testing and provide methods for 
+           creating components and services in unit tests.
+configureTestingModule -->method takes a metadata object that can have the most of the properties
+                          of an @Ngmodule. To test a servcie
+
+BeforeEach  =>will be invoked before each test case
+            =>
+AfterEach   =>after each test case execution makes null
+
+beforeAll   =>
+afterAll    =>
+
+xit  => it will stop executing
+componentFixture is used to get the instance of an component or like we can write unit test for that 
+ perticular component
+
+HttpClientTestingModule =>consists a mock implementation of a http service
+
+HttpTstingController    =>
+
+presentaional components  =>
+
+el=fixture.debugElement   =>for access in the dom element
+fixture.detectChanges     =>what we are adding on the components level and to appear on the html
+                             we use detect changes
+
+.compileComponents =>used to compile the components aftre all requirements are done like testbed and imports
+we need to use asnc for before each to execute before the test cases run
+
+
+stub-a dummy piece of code that lets the test run,but dont;care what happens to it
+mock-a dummy piece of code that you verify is called correctly as part of the test
+spy--a dummy piece of code,that intercepts some calls to a real piece of code
+     allowing you to verify calls without replacing the entire original object
+package.json
+
+
+kiwlwoufttgolxof
+
+[
+  {
+    "id": 2,
+    "purpose": "Lunch",
+    "description": "Lunch at Barbique",
+    "costEstimated": 10000,
+    "advanceAmmount": 5000,
+    "date": "2021-11-11T00:00:00",
+    "status": "Approved",
+    "userId": 5,
+    "managerId": 3,
+    "createdOn": null,
+    "reportingTo": "Dinesh"
+  },
+  {
+    "id": 10006,
+    "purpose": "Visiting barbeque",
+    "description": "skskskk",
+    "costEstimated": 20000,
+    "advanceAmmount": 2222,
+    "date": "2222-01-01T00:00:00",
+    "status": "Approved",
+    "userId": 5,
+    "managerId": 3,
+    "createdOn": "2022-05-22T00:00:00",
+    "reportingTo": "Dinesh"
+  },
+  {
+    "id": 10008,
+    "purpose": "Going to Himalayas",
+    "description": "Going to himalayas with friends",
+    "costEstimated": 30000,
+    "advanceAmmount": 15000,
+    "date": "2022-05-04T00:00:00",
+    "status": "Approved",
+    "userId": 5,
+    "managerId": 3,
+    "createdOn": "2022-05-05T00:00:00",
+    "reportingTo": "Dinesh"
+  },
+  {
+    "id": 10009,
+    "purpose": "Visiting TajMahal",
+    "description": "Visting tajmahal with friends",
+    "costEstimated": 10000,
+    "advanceAmmount": 5000,
+    "date": "2022-05-13T00:00:00",
+    "status": "Approved",
+    "userId": 5,
+    "managerId": 3,
+    "createdOn": "2022-05-05T00:00:00",
+    "reportingTo": "Dinesh"
+  },
+  {
+    "id": 10010,
+    "purpose": "Visiting El dorado",
+    "description": "Visiting EL dorado with friends to find gold",
+    "costEstimated": 10000,
+    "advanceAmmount": 5000,
+    "date": "2022-05-13T00:00:00",
+    "status": "Approved",
+    "userId": 5,
+    "managerId": 3,
+    "createdOn": "2022-05-05T00:00:00",
+    "reportingTo": "Dinesh"
+  },
+  {
+    "id": 10011,
+    "purpose": "Visiting Park",
+    "description": "Visting park with friends",
+    "costEstimated": 10000,
+    "advanceAmmount": 5000,
+    "date": "2022-05-19T00:00:00",
+    "status": "Approved",
+    "userId": 5,
+    "managerId": 3,
+    "createdOn": "2022-05-05T00:00:00",
+    "reportingTo": "Dinesh"
+  }
+]
+
+Hi [Name of your manager or supervisor], 
+I'm sending this email to inform you that I can't come to the office today.
+ I've been feeling under the weather since [when the symptoms occurred – yesterday,
+ last night, etc.]. I went to the hospital and the doctor said I've got [illness].

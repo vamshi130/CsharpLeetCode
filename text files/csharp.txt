@@ -1,0 +1,60 @@
+Arrays declaration
+string[] animals = new string[3];
+string[] animals2 = new string[] { "deer", "moose", "boars" };
+string[] animals3 = { "deer", "moose", "boars" };
+string[] animals4 = new[] { "deer", "moose", "boars" };
+
+Array merging
+string data=string.Join(";",animals2)
+
+Array Index
+int dogIndex = Array.IndexOf(animals2, "deer");
+gives -1 when no index is found;
+
+Split
+string str1="vam;gh";
+string[] str=str1.Split(";")
+If split not works for some special characters we can use StringSplitOptions
+string[] lines = value.Split(new string[] { "\r\n" }, StringSplitOptions.None);
+
+https://www.dotnetperls.com/split
+// Split on newline, and trim resulting strings.
+// ... This eliminates the other whitespace sequences.
+string[] lines = value.Split('\n', StringSplitOptions.TrimEntries);
+// Split on all non-word characters.
+// ... This returns an array of all the words.
+String[] words = Regex.Split(sentence, @"\W+");
+
+ string s = "I have a cat";
+        
+        // Loop through all instances of the letter a.
+        int i = 0;
+        while ((i = s.IndexOf('a', i)) != -1)
+        {
+            // Print out the substring.
+            Console.WriteLine(s.Substring(i));
+            
+            // Increment the index.
+            i++;
+        }
+ 
+////////////////////////////////////////////////////////////
+Dictonaries
+var values = new Dictionary<string, string>();
+values.Add("A", "uppercase letter A");
+if (values.TryGetValue("c", out string description))
+Console.WriteLine(description);
+
+////////////////////////////////////////////////////////////
+Substrings
+string result = input.Substring(3, 3);
+int separatorIndex = value.IndexOf(separator);
+
+   s =  "abcabcbb"
+   temp={"a","b","c","a","b","c","b","b"}
+   prevChar={"a":0,"b":1,"c":2,""}
+   curChar=a;
+   max=2;
+   seqstart=2
+   
+   

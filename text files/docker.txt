@@ -1,0 +1,101 @@
+Docker
+Docker Image -an executable package that includes everthing to run an applicartion
+             including the code, a runtime libraries,enviromnment variables and comnfoiguration files
+
+Docker Containers -a runtime instance of an image
+Docker Registries -All images are stored in registeris-either public or private registries.
+                   The most popular registries is docker hub
+Volumes -to share files between the host and containers
+Networking -containers to communicate
+
+
+Commands
+docker --version
+docker images  ==> to check the availabe images
+docker ps -a   ==> to check the containers present
+
+docker pull mcr.microsoft.com/dotnet/core/samples:dotnetapp
+  -above one refers to an image to pull into local
+
+-To create a container from an images the below command is used
+ docker run --name demo1 --publish 8888:80 
+
+docker run will create a container and start the container
+80  => refers within the container port number 
+8888  => refers to port of local 
+
+
+to create an image
+ docker build --tag myProfile .
+ or 
+ docker build --tag myprofile --file ./Dockerfile .
+. refers to current context of current folder 
+
+to create a container
+docker run --name demo1-c1 --publish 9001:80 myprofile .
+ 
+dotnet restore ==> it will restore any nuget packages is installed
+ 
+WorkDIR command is used to define the working directory of a docker container at any given time
+       the command is specified in the dockerfile
+	   
+Any run,cmd,add,copy,entrypoint commands will be executed in the specified working directory	 
+
+COPY <src> <dest>
+
+src is the local computer
+dest is the path where files are to be copied
+
+copy --from  must specify a multistage images alias
+copy --from=base/source /destination/
+
+Entrypoint 
+
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
+ here from is to load the image to the local 
+ 
+sdk is only required to build and publish the artifacts
+after that to run the application we not required sdk we need asp.net package
+
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
+WORKDIR /app
+EXPOSE 8080
+EXPOSE 8083
+
+RUN useradd -u 1000 ng
+USER 1000
+
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+WORKDIR /src
+COPY ["Generic.API.csproj","Generic.API/"]
+# WORKDIR /src/.
+RUN dotnet restore "Generic.API/Generic.API.csproj"
+
+COPY . .
+WORKDIR "src/Generic.API"
+RUN dotnet build "Generic.API.csproj" -c Release -o /app/build
+RUN dotnet build "Generic.API.UnitTests.csproj" -c Release -o /app/unittests
+
+FROM build AS test
+LABEL unittestlayer=true
+RUN dotnet test /app/unittests/Generic.API.UnitTests.dll --logger "trx;LogFileName=unittestsresults.xml" --results-directory /out/testresults | 2>/dev/null
+
+FROM build AS publish
+RUN dotnet publish "Generic.API/Generic.API.csproj" -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+
+ENTRYPOINT ["dotnet", "Generic.API.dll"]

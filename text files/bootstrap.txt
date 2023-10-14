@@ -1,0 +1,27 @@
+card-deck --add space between cards with equal heights
+card-columns --add cards of uneqaul heights rearrange the cards 
+
+navigation bar
+nav used to display navbar
+class="nav nav-tabs" --gives the tab like display
+class="nav nav-pills"--gives output as a button
+class="nav nav-pills nav-justified" --givs the each button have same size
+
+
+dropdown 
+class="nav-item dropdown " 
+centre-block ->to place image centre
+ 
+!QAZ2wsx#EDC
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,102 @@
+npp 
+github,gitlab
+commit--
+        After chaning changes information is saved
+clone-- exact copy
+Tracked/Untracking--(hidden)There is a .git folder which track every changes
+
+Branch--
+Working directory---->-Staging Area(or)Index area-->--Repository(.git folder)--->---Remote(git hub)
+----
+Two new terms
+Master--default created 
+Origin--
+server default name
+whenever we clonig a project than name should be origin
+----
+we use add for getting into staging area--
+we use commit for moving into reposiory .git folder
+we use push for moving from reposiory .git to remote (github)
+---
+when we need to clone a project-
+-git clone<repo-url> (no need of angular brackets)
+-git status for checking the status
+--git add modified name
+--git commit -m "commit name"   -->pushing to rpository
+--git push origin master  ->pusing to github
+--------------
+pushing a project to repository
+--codnitions
+github must have a repositoty to addd a project
+github credentials required
+open git bash
+1-move to speecific folder to push
+2-git init (to initialize .git)
+3-git add . --it all files
+4-git commit -m "initial commit"
+5-git remote add origin url
+6-git push -u origin master 
+------------------------
+tracked and untracked
+trcacked---(unmodified ,modified , staged)
+----
+after commited suppose we need to edit then we use( npp file name which are in unmodfied staged
+-
+if we want to ignore some files to be staged
+we just need to use command
+-npp .gitignore
+just mention filename in npp after opened in gitignore mode
+*.txt--it means all file that having .txt extension
+for folder 
+folder/ 
+if we ignore .js files(100) but we need on js file
+then 
+*.js
+!main.js --represents except main.js file
+/test.txt --it represents parents directory file ignored
+---------------
+status vs Diff
+Git commit------
+ ----------------------------------
+ Git Log(history)
+ git log -2   (gives last 2 commits)
+ git log --pretty=oneline  gives the impomation in one line
+ ------------------------------
+ Master---
+ Commit---
+ Branch--
+ is like a pointer to one of the commits
+ Creating Branch--------
+ git branch branchname
+ head define where the branch is present presently
+ ----
+ git checkout side-menu move to branch
+ git log --oneline --graph --all
+ creating branch and moving to branch
+ git checkout -b branch-name
+ ----------
+ Merging
+ --when we need to push updated branch to master
+ ---first we nne to checkout to master
+ git merge branch name
+ Deleting a branch
+ git branch -d branch name
+ -----
+git pull origin master (if any change made in github files will update in local also)
+git push origin master (pushing to server)
+ 
+ aliasing
+ -----
+  git config --global alias.allcommits "log --oneline --graph --all"
+---Rebasing
+git rebase branch name(other form of merge)
+
+ ----------------------
+Data binding
+Communication between Ts and html
+Busiiness logic and Html code
+
+
+
+
+

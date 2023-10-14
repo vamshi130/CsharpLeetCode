@@ -1,0 +1,24 @@
+Razor pages is a new feature of Asp.net core mvc that makes coding page focussed scenarios easier and more productive
+Routing --route folder is the pages folder
+  Middleware-----
+  which are software components that are assebled into application
+  pipeline to handle request and response
+  ----------------
+  Async will run multiple tasks at a time
+
+  ------
+  to run the program by refresh after changes 
+  install package Microsoft.Aspnetcore.Mvc.Razor.RuntimeCompilation
+  and add Microsoft.Aspnetcore.Mvc.Razor.RuntimeCompilation in startup file
+  -------------------------
+  -------------------------
+  
+  Areas
+  AS mvc conatins models views and controllers for small projects it is ok
+  But when code big there will be complexity to find models and controllers
+  so to that we use areas
+  and add route in startup file----
+  
+  -------------------------
+  ViewModels
+  View Model is a collection of entities or models that are used in view

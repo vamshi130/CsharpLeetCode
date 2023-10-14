@@ -1,0 +1,197 @@
+mvc--model,view,controller
+--app.start
+--content--
+--contolers--login signup,
+--fonts--
+--models--all domain clases
+---scripts--contains all javscipts
+--views--  
+Asp.net mvc is a web development framework from microsoft
+--it is a successor of asp.net webforms
+--it combines the effectiveness and tidiness of model-view-controller architecture
+and the best parts of the existing asp.,net platform
+models----a set of classes that describes the data you are working with
+-domain mobel
+-view model
+views---define show the application ui wiil be displayed
+controllers--total handling performed by controlllers
+ or controls interaction between views and model
+--mvc cfolder structures
+app_start--contains class files which will be executed when the application starts
+content---contains static files like ss files ,images icons,bootstrap.css
+controllers--contains files for the ontrollers
+controllers handles users request and return a response
+fonts-contains custom font
+models--contains model class files 
+scripts--javasripts files
+view--contails html files for the application 
+view folder includes separate folder for each controllers 
+shared folder under view comntroller contains all the views which will be shared among 
+different controlllers eg layout files
+----
+--
+the controller in mvc handles any incoming url requests
+contoller is  a class derived from the base class
+contoller class contains oublic methods calles action methods
+ontroller and its action methods handles incoming browser requests
+retieves necessary model data
+--whenever we need to create a student controller is must be the name ended with controller
+whenever the view name is different from the action name we musts
+specify the view name in return;
+------
+custom routing 
+attribute routing
+---
+[Route("movies/released/{year}/{month:regex(\\d{4}))]
+---
+passing data to views
+----------------
+----------------
+for shared folder we can add folder
+
+--
+contentResult--it is used when we need to display the plain text instead of html
+code--
+public contentResult heloo()
+{
+  return content("jello")
+}
+or
+public string ssy()
+{
+ return "goodbte";
+}
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+ASP.NET Core can be used on Windows, Mac, or Linux
+ASp is server side scripting language
+supports for cross platform
+ 
+
+middlewares
+Middleware is a piece of code in an application pipeline used to handle requests and responses.
+ All these middleware packages are available as nuget packages.
+ 1.ex.-Authenticate users
+      -Error handling 
+	  -To serve the static file like js files, css files, images. 
+ request---asp.net core middleware--  
+ when a request comes into server then it access into .net framework
+ and put request into context objects get passed along with the middleware
+ 
+
+
+
+
+
+
+--------------------------------
+open api documentaion
+-specification that helps describe the capabilities of a restapi
+--available endpoints
+--opertaing parameters
+--Authentication methods
+-To implement openapi specifications we can use Swagger
+Reduce the amount of time needed to document a service.
+-swagger Editor
+-Swagger UI
+-Swagger Codegen
+we need to install swashbuckkle.aspnetcore
+
+
+
+
+
+-----------------------------------------------------------------------
+-Asp is server side scripting language
+-
+
+Asp.net
+-it is based on http protocol for requests and communications
+-shares most of its key components with .net
+-it supports of multiple languages
+- 
+
+Asp.net core
+-newer version runs on .net core and .net framework
+-it is available as open source
+-supports for cross platform
+-
+
+files in .net core emplty
+1.connected services-
+2.dependencies-contains all packets or other projects on which your project depends
+      -Analyzers-it makes our code cleaner ,error free, checks that our code satisfies a list 
+	    of rules incorporated in it .Analyzers work only at compile time doest effect resulting 
+	    application
+	  -Frameworks-contains list of frameworks our project depends on.
+		
+3.properties- 
+             launchsettings.json-it tells our projects runs on which url and many more
+  Appsettings.json-- 
+			 
+			 
+			 
+4.programs.cs-
+             this file defines the program class with one static method main
+			  which is the entry of your web application
+			 The only purpose of this method is to define the host and pass the 
+			 control to the startup class
+5.startup.cs- 
+             -it performs all initilization tasks
+			 -it registers all services used in this project in th Dependedncy injection container
+			 -it defines the middleware pipeline of your web-application
+			 
+No startup classs is present in .not 6
+in dotnet 5 in startup clas we are having configservice and configmethod which is uded to add services 
+   to the pipeline
+   program-----------
+        public static void Main(string[] args)
+        {
+            CreateHostBuilder(args).Build().Run();
+        }
+
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                });
+		  
+		  createhostbuiler  return one objects that implements ihostbuilder 
+		  again this createhostbuilder returns one object that object contains one build method
+		  with that build method we are building the web host in this we are executing the web application
+		  we are using run method this starts the listening of incoming web reqeust
+           
+       ----------------------------InProcess----
+	      createDefaultBuilder
+		        -setting up the web server
+				-loading the host and application configuration from various configuration sources
+				-configures logging
+				
+		after deveoping asp.net core application we need to deploy it on a server
+		  --ASp.net core offers two hosting models
+		InProcess-default hosting model
+	      createDefaultBuilder() method call UseIIS() method and host app inside of the IIS
+		OutProcess
+	   
+	   
+	   
+in dotnet 6 in we create a builder under the builder we add services to the container
+  and released csharp10 version
+  -No using statements
+  -No namespace
+  -No Program class
+  -No Main method
+  ex. Calculator obj=new Calculator();
+      obj.num1=10;
+	  obj.num2=20;
+	   ---in dotnet6--
+	   Calculator obj=new();
+	   obj=new(10,20);
+  
+  
+  -------------------------
+localhost\SQLEXPRESS

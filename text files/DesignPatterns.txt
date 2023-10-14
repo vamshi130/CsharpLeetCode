@@ -1,0 +1,149 @@
+Design Principles
+Decarators-
+Decarator pattern is a powerfull tool for adding functionality to objects dynamically and maintaining code flexibility and reusability
+
+1-decarator pattern allows us to add new behavior to an object dynamically at runtime without effecting the behavior of other objects.
+
+
+-------------
+---Creation
+       -Object creation and initialization
+	   -Reduce the complexity of object creation
+---Structural
+       -Decoupling interface and implementation
+---Behaviourail patterns
+       -Communication between classes and objects
+
+ 
+Creation 
+  -Abstract Factory,Builder,Factory,Object pool,Prototype,Singleton
+ 
+Chain of Responsibility
+-Reduced coupling
+-added flexibility in assigning responsiblities to object
+-Receipt is not guaranteed
+
+ abstract class Car{
+    public description:string='hi';
+    public getDescription():string{
+        return this.description;
+    }
+    public abstract cost(age:number):number;
+ }
+ class ModelS extends Car{
+    public description='Modedel s'
+    public cost(age: number):number{
+        return age;
+    }
+ }
+ class ModelX extends Car{
+    public description='Modedel s'
+    public cost():number{
+        return 8000;
+    } 
+ }
+//  abstract class Caroptions extends Car{
+//     decoratoredCar:Car|undefined;
+//     public abstract getDescription():string
+//     public abstract cost():number;
+//  }
+ class EnhancedAutoPilot extends Car{
+    decoratedCar:Car;
+    constructor(car:Car){
+        super();
+        this.decoratedCar=car;
+    }
+    public getDescription():string{
+      return this.decoratedCar.getDescription() + ',Ehnached Autpilot';
+
+    }
+    public cost(age:number): number {
+        if(age >5000){
+             return this.decoratedCar.cost(age) + 1000;
+        }
+        return this.decoratedCar.cost(age) + 5000;
+       }
+
+ }
+ class RearFacedSeats extends Car{
+    decoratedCar:Car;
+    constructor(car:Car){
+        super();
+        this.decoratedCar=car;
+    }
+    public getDescription():string{
+      return this.decoratedCar.getDescription() + ',RearFacedSeats Autpilot';
+
+    }
+    public cost(age:number): number {
+        return this.decoratedCar.cost(age) + 4000;
+       }
+
+ }
+ let myTesla=new ModelS();
+ myTesla=new RearFacedSeats(myTesla);
+ myTesla=new EnhancedAutoPilot(myTesla);
+//  console.log(myTesla.getDescription());
+//  console.log(myTesla.cost(1000));
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+abstract class Discount{
+   public abstract getDescription():string;
+   public abstract getDiscountCalculate(age:number,month:number | string,gender:string):number;
+}
+ class BaseDiscount implements Discount{
+   getDescription(): string { 
+    return "your discount is based on "
+   }
+   getDiscountCalculate(age: number,month: string|number,gender: string): number {
+      return 0;
+   }
+
+}    
+
+ class Age extends BaseDiscount{
+     extendedDiscount:BaseDiscount;
+     constructor(discount:BaseDiscount){
+     super();
+        this.extendedDiscount=discount;   
+     }
+     public getDescription():string{
+        return this.extendedDiscount.getDescription() + "Age";
+     }
+     public getDiscountCalculate(age: number,month: string|number,gender: string): number{
+        if(age <=15 && age>10){
+            return this.extendedDiscount.getDiscountCalculate(age,month,gender ) + 15
+        }
+        if(age <=25 && age>15){
+            return this.extendedDiscount.getDiscountCalculate(age,month,gender ) + 20
+        }
+        if(age <=35 && age>25){
+            return this.extendedDiscount.getDiscountCalculate(age,month,gender ) + 30
+        }
+        return 0;
+     }
+}
+class Gender extends BaseDiscount{
+     extendedDiscount:BaseDiscount;
+     constructor(discount:BaseDiscount){
+     super();
+        this.extendedDiscount=discount;   
+     }
+     public getDescription():string{
+        return this.extendedDiscount.getDescription() + ",Gender";
+     }
+     public getDiscountCalculate(age: number,month: string|number,gender: string): number{
+        if(gender =='male'){
+            return this.extendedDiscount.getDiscountCalculate(age,month,gender ) + 10
+        }
+        else
+         return this.extendedDiscount.getDiscountCalculate(age,month,gender ) + 20
+     }
+}
+// let discount=new BaseDiscount();
+let discount=new Age(new BaseDiscount());
+discount=new Gender(discount);
+console.log(discount.getDescription());
+console.log(discount.getDiscountCalculate(20,'may','female'))
+
+

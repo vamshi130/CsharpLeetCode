@@ -1,0 +1,85 @@
+Azure is a cloud computing platform with an ever-expanding set of services
+AZure fundamentals is a series of six learning paths
+Cloud computing
+ It's the delivery of computing services over the network
+ which includes servers, storage,databases,networking
+      (screentshot)
+	  container engine after the hypervisor
+	  in hypervisor we need to do patching ,migration and many more
+	  in container we dont need to any it convert into a package 
+	  hypervisor,comtainer,serverless runtime
+	  serverless runtime ---function
+	Cloud services Benefits
+	-Scalability and elastibility
+	-High Availability
+    -Fault tolerance
+	-Disaster recovery in azure we call as service recovery
+	
+	On-premises--we can manage when we are having data centers (i.e in our office we having total data servers or own cooling systems)
+	             we are responsible for everything total         
+	Iaas--like os,vms,cpu(we need to choose which os to use ) (providing servers or switches or storage or networking in high availability )ex google,aws
+	             Ex.In this we are taking a a place to place our own os or middeware (the place is just like server or networking)
+			   --host
+	Paas--like developers,deployers
+	             in this how the application is running
+	Saas--like business users
+	             in this they are having total responsibility
+				 ex office365. 
+	 
+	  
+	
+	
+	public cloud--
+	prons-
+	
+	private cloud--
+	hybrid  cloud--
+	
+    Virtual machine Scale sets (VMSS)(it will increase or decrease automatically)	
+	
+	 whenever the cpu is using some memory i.e more then it will automatically create another vms
+	
+    
+ 
+------
+Azure
+ Azure gives us the freedom to build ,manage and deploy applications on a 
+ massive global network using our favourite tools and frameworks
+ 
+ Virualization
+-------------------------------
+Azure Architecture
+---Regions -region is a set datacenters deployed within a latency-defined perimeter
+            connected through a dedicated regional low-latency network.
+---Availability zones
+---Resource group ex( groups inside another group) Resource group-vnet-subnet-
+                 -we group the subscription s into management groups
+				 
+---Azure Resource Manager (ASM)( it is totally in json format)we can aslo create vm using 
+                    visual studio using arm template
+---The Azure Architecture usage and benefits 
+
+    -------------------------Azure solutions-----------------------
+Azure Management Tools
+-Azure CLI
+-Azure PowerShell
+-Azure Portal
+
+Regions--- 
+
+
+Traffic manager-checks to send request to nearest region
+
+
+networking-vpn and loadbalancing
+
+https://meet.google.com/rxk-wyiv-gyv?hs=224
+
+Virtual machines vs containers
+containers--docker engine is place of hypervisor
+          --No os in case of containers
+		  --More Containers as compared to vms
+		  --Bins/libs can be shared in containers but not in vms
+		  
+		  
+		  

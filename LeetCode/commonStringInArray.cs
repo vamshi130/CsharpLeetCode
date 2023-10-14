@@ -10,8 +10,6 @@ namespace Dictionaries
     {
         public static string commonString(string[] str)
         {
-            int[] arr=new int[3] {1,2,3};
-   
             Array.IndexOf(str, "abc");
             string haystack = "mississippi";
             string needle = "issi";
