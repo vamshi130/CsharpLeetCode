@@ -9,7 +9,7 @@ namespace Arrays
 {
     public static class MoveZeroesEnd
     {
-        private static int[] arr = new int[] {0,5,2,0,6,9,0,1,0};
+        private static int[] arr = new int[] { 2, 1, 0, 0, 3, 0, 4, 0 };
         public static  void MoveZeroes()
         {
             int nz = 0;
@@ -22,12 +22,12 @@ namespace Arrays
                         nz++;
                     }
 
-                    if (arr[n] != 0)
+                    if (n<arr.Length && arr[n] != 0)
                     {
                         n++;
                     }
 
-                    if (nz < arr.Length && arr[nz] != 0 && arr[n] == 0)
+                    if (nz < arr.Length &&n<arr.Length && arr[nz] != 0 && arr[n] == 0)
                     {
                         int temp = arr[nz];
                         arr[nz] = arr[n];

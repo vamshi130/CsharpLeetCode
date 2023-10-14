@@ -132,7 +132,7 @@ namespace LinkedList
         }
         public void Traverse()
         {
-            Node1 curr = head;
+            Node1 curr = head; 
             if (curr != null)
             {
                 while (curr != null)

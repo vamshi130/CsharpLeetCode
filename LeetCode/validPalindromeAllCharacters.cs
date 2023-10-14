@@ -11,17 +11,12 @@ namespace Dictionaries
     {
         public static Boolean ValidatePalindrome()
         {
-            string s = "0p";
+            string s = "Noel - sees Leon";
             string su = " ";
             //if(string.IsNullOrEmpty(s)) {
             //    Console.Write(true);
             //    return true;
             //}
-            int[] arr = new int[] { 1, 2, 3 };
-            string[] st = arr.Select(x => x.ToString()).ToArray();
-            string sp=st.ToString();
-            string pp = string.Join(",", sp);
-            Console.WriteLine(st);
             if(s.Length < 1) {
                 return true;
             }

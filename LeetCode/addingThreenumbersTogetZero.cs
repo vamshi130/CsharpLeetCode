@@ -17,6 +17,7 @@ namespace Dictionaries
             {
                 if (i == 0 ||  (i>0 &&( nums[i] != nums[i - 1])))
                 {
+
                     int start = i + 1;
                     int end = nums.Length - 1;
                     int sum = 0 - nums[i];

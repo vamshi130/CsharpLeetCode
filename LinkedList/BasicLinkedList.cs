@@ -17,6 +17,20 @@ namespace LinkedList
         {
             head = null;
         }
+        public void ReverseLinkedList()
+        {
+            Node prev = null;
+            Node curr = head;
+            while (curr != null)
+            {
+                Node node = curr.next;
+                curr.next = prev;
+                prev = curr;
+                curr = node;
+            }
+
+            head = prev;
+        }
         public void Traverse()
         {
             Node temp = new Node();

@@ -22,7 +22,6 @@ namespace Dictionaries
             //foreach (var key in dictionay)
             //{
             //    Console.WriteLine($"key: {key.Key} ,value:{key.Value}");
-            //}
             //if(dictionay.ContainsKey("movie"))
             //dictionay.Remove("movie");
             //Console.WriteLine("hello");
@@ -48,9 +47,7 @@ namespace Dictionaries
             //string data= IntegersToRomans.romans(num);
             //Console.WriteLine(data);
             /////////////////////////////////////////////////////////////////
-            //string[] str = { "reflower","flow","flight" };
-            //var st = "vk";
-            //str[0].Contains(st);
+            //string[] str = { "flower", "flow", "flight" };
             //commonStringInArray.commonString(str);
             /////////////////////////////////////////////////////////////////
             //addingThreenumbersTogetZero.addThreeNum();
@@ -68,7 +65,7 @@ namespace Dictionaries
             //int k = 2;
             //TopKFrequentElements.TopKFrequent(nums,k);
             //////////////////////////////////////////////////////////////////
-            //LongestConsecutiveSequence.ConsecutiveNumbers();
+            LongestConsecutiveSequence.ConsecutiveNumbers();
             //////////////////////////////////////////////////////////////////
             //validPalindromeAllCharacters.ValidatePalindrome();
             //containerWithMostWater.mostWater();
@@ -99,10 +96,10 @@ namespace Dictionaries
             //objA.Test();
             //objB.Test();
             //objAB.Test();
-            //RecursionTest.Recusrion(3);
-            int[] arr=new int[] {-1,-1,0,-3,3};
-            ProductsOfElementsInAnArray.ProductOfArray(arr);
-
+            ////RecursionTest.Recusrion(3);
+            //int[] arr=new int[] {-1,-1,0,-3,3};
+            //ProductsOfElementsInAnArray.ProductOfArray(arr);
+            //Console.WriteLine(HappyNumber.IsHappy(2));
         }
     }
 }
